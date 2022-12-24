@@ -9,33 +9,21 @@ import { Button } from 'components/Button/Button';
 const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-  const [queryName, setQueryName] = useState('');
   const [loader, setLoader] = useState(false);
   const [page, setPage] = useState(1);
 
+  const query = searchParams.get('query');
+
   useEffect(() => {
-    setQueryName(searchParams.get('query'));
-    if (!queryName) return;
+    if (!query) return;
     setLoader(true);
 
-    fetchSearchMovie(queryName, page).then(({ data: { results } }) => {
+    fetchSearchMovie(query, page).then(({ data: { results } }) => {
       setMovies(prevMovies => [...prevMovies, ...results]);
+
       setLoader(false);
     });
-  }, [page, queryName, searchParams]);
-
-  const handleSubmit = event => {
-    event.preventDefault();
-
-    const value = event.target;
-
-    if (value.elements[0].value === '') return;
-
-    setSearchParams({ query: value.elements[0].value });
-
-    value.reset('');
-    setMovies([]);
-  };
+  }, [page, query]);
 
   const ButtonClick = () => {
     setPage(prevPage => prevPage + 1);
@@ -43,7 +31,12 @@ const Movies = () => {
 
   return (
     <>
-      <SearchMovie submit={handleSubmit} />
+      <SearchMovie
+        setPage={setPage}
+        setSearchParams={setSearchParams}
+        setMovies={setMovies}
+      />
+      <HomePage movies={movies} />
 
       {loader ? (
         <Circles
@@ -56,10 +49,7 @@ const Movies = () => {
           visible={true}
         />
       ) : (
-        <>
-          <HomePage movies={movies} />
-          {movies.length && <Button buttonClick={ButtonClick} />}
-        </>
+        <>{movies.length && <Button buttonClick={ButtonClick} />}</>
       )}
     </>
   );

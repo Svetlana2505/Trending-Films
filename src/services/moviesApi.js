@@ -12,11 +12,12 @@ export const fetch = page => {
   });
 };
 
-export const fetchSearchMovie = query => {
+export const fetchSearchMovie = (query, page) => {
   return axios(`${BASE_URL}/search/movie`, {
     params: {
       api_key: API_KEY,
       query,
+      page,
     },
   });
 };
