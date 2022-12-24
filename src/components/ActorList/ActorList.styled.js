@@ -7,6 +7,7 @@ export const List = styled.ul`
   margin-top: -20px;
   margin-left: -20px;
 `;
+
 export const Item = styled.li`
   width: calc((100% - 100px) / 5);
   margin-top: 20px;

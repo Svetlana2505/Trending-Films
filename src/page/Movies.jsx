@@ -29,6 +29,8 @@ const Movies = () => {
 
     const value = event.target;
 
+    if (value.elements[0].value === '') return;
+
     setSearchParams({ query: value.elements[0].value });
 
     value.reset('');

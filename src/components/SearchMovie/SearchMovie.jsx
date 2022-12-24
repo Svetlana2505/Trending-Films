@@ -4,7 +4,7 @@ export const SearchMovie = ({ submit }) => {
   return (
     <>
       <Form onSubmit={submit}>
-        <Input type="text" name="query" />
+        <Input type="text" name="query" autoComplete="off" />
         <Button>Search</Button>
       </Form>
     </>

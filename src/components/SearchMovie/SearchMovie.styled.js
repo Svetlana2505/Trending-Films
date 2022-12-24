@@ -11,7 +11,7 @@ export const Input = styled.input`
   border-bottom: 1px solid grey;
 
   &:focus {
-    /* background-color: none; */
+    background-color: transparent;
     outline: 0;
     color: grey;
   }
