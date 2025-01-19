@@ -1,27 +1,27 @@
 {
   "files": {
     "main.css": "/Trending-Films/static/css/main.005ba9ed.css",
-    "main.js": "/Trending-Films/static/js/main.2d01e949.js",
-    "static/js/468.3f5ba3e5.chunk.js": "/Trending-Films/static/js/468.3f5ba3e5.chunk.js",
-    "static/js/809.ddc420e8.chunk.js": "/Trending-Films/static/js/809.ddc420e8.chunk.js",
-    "static/js/40.65ecdcc2.chunk.js": "/Trending-Films/static/js/40.65ecdcc2.chunk.js",
-    "static/js/340.ae561849.chunk.js": "/Trending-Films/static/js/340.ae561849.chunk.js",
-    "static/js/192.fb09e91a.chunk.js": "/Trending-Films/static/js/192.fb09e91a.chunk.js",
+    "main.js": "/Trending-Films/static/js/main.edf0f08f.js",
+    "static/js/468.869a0709.chunk.js": "/Trending-Films/static/js/468.869a0709.chunk.js",
+    "static/js/809.944b73e9.chunk.js": "/Trending-Films/static/js/809.944b73e9.chunk.js",
+    "static/js/40.6c4ff1d5.chunk.js": "/Trending-Films/static/js/40.6c4ff1d5.chunk.js",
+    "static/js/340.a708da27.chunk.js": "/Trending-Films/static/js/340.a708da27.chunk.js",
+    "static/js/192.a75b3947.chunk.js": "/Trending-Films/static/js/192.a75b3947.chunk.js",
     "static/js/388.477a0512.chunk.js": "/Trending-Films/static/js/388.477a0512.chunk.js",
     "static/js/185.2b282696.chunk.js": "/Trending-Films/static/js/185.2b282696.chunk.js",
     "index.html": "/Trending-Films/index.html",
     "main.005ba9ed.css.map": "/Trending-Films/static/css/main.005ba9ed.css.map",
-    "main.2d01e949.js.map": "/Trending-Films/static/js/main.2d01e949.js.map",
-    "468.3f5ba3e5.chunk.js.map": "/Trending-Films/static/js/468.3f5ba3e5.chunk.js.map",
-    "809.ddc420e8.chunk.js.map": "/Trending-Films/static/js/809.ddc420e8.chunk.js.map",
-    "40.65ecdcc2.chunk.js.map": "/Trending-Films/static/js/40.65ecdcc2.chunk.js.map",
-    "340.ae561849.chunk.js.map": "/Trending-Films/static/js/340.ae561849.chunk.js.map",
-    "192.fb09e91a.chunk.js.map": "/Trending-Films/static/js/192.fb09e91a.chunk.js.map",
+    "main.edf0f08f.js.map": "/Trending-Films/static/js/main.edf0f08f.js.map",
+    "468.869a0709.chunk.js.map": "/Trending-Films/static/js/468.869a0709.chunk.js.map",
+    "809.944b73e9.chunk.js.map": "/Trending-Films/static/js/809.944b73e9.chunk.js.map",
+    "40.6c4ff1d5.chunk.js.map": "/Trending-Films/static/js/40.6c4ff1d5.chunk.js.map",
+    "340.a708da27.chunk.js.map": "/Trending-Films/static/js/340.a708da27.chunk.js.map",
+    "192.a75b3947.chunk.js.map": "/Trending-Films/static/js/192.a75b3947.chunk.js.map",
     "388.477a0512.chunk.js.map": "/Trending-Films/static/js/388.477a0512.chunk.js.map",
     "185.2b282696.chunk.js.map": "/Trending-Films/static/js/185.2b282696.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.005ba9ed.css",
-    "static/js/main.2d01e949.js"
+    "static/js/main.edf0f08f.js"
   ]
 }
