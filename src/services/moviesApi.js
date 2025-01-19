@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_KEY = 'e84a2dc7e130243e2513aaa2cdb72d34';
-const BASE_URL = 'https://api.themoviedb.org/3/';
+const BASE_URL = 'https://api.themoviedb.org/3';
 
 export const fetch = page => {
   return axios(`${BASE_URL}/trending/movie/day`, {
