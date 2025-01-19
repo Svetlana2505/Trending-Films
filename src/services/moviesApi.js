@@ -31,7 +31,7 @@ export const fetchMovieById = movieId => {
 };
 
 export const fetchMovieCredits = id => {
-  return axios(`${BASE_URL}movie/${id}/credits`, {
+  return axios(`${BASE_URL}/movie/${id}/credits`, {
     params: {
       api_key: API_KEY,
     },
@@ -39,7 +39,7 @@ export const fetchMovieCredits = id => {
 };
 
 export const fetchMovieReviews = id => {
-  return axios(`${BASE_URL}movie/${id}/reviews`, {
+  return axios(`${BASE_URL}/movie/${id}/reviews`, {
     params: {
       api_key: API_KEY,
     },
