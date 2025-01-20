@@ -1,5 +1,6 @@
 import { Box, StyleLink, Title, List, Item } from './Info.styled';
 import { useLocation } from 'react-router-dom';
+
 export const Info = () => {
   const location = useLocation();
 

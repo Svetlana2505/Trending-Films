@@ -1,7 +1,9 @@
 import { StyledLink, List, Item } from './Navigation.styled';
 import { useLocation } from 'react-router-dom';
+
 export const Navigation = () => {
   const location = useLocation();
+
   return (
     <nav>
       <List>

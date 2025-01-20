@@ -1,4 +1,5 @@
 import { List, Item, Title, Text, Box } from './ActorList.styled';
+import icon from '../../assets/images/icon-profile.png';
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500/';
 
 export const ActorList = ({ actor }) => {
@@ -11,7 +12,9 @@ export const ActorList = ({ actor }) => {
               {profile_path ? (
                 <img src={`${IMAGE_URL}${profile_path}`} alt="" />
               ) : (
-                'not image'
+                <div style={{ marginTop: 'auto' }}>
+                  <img src={icon} alt="" width="150" />
+                </div>
               )}
               <Box>
                 <Title>{name}</Title>

@@ -13,11 +13,17 @@ export const Item = styled.li`
   margin-top: 20px;
   margin-left: 20px;
   border-bottom: 0.5px solid #b8860b;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  min-height: 100%;
 `;
 
 export const Box = styled.div`
   padding: 15px 0;
   text-align: center;
+  margin-top: auto;
 `;
 
 export const Title = styled.h2`

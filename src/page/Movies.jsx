@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { SearchMovie } from 'components/SearchMovie/SearchMovie';
 import { fetchSearchMovie } from 'services/moviesApi';
-import { HomePage } from 'components/HomePage/HomePage';
 import { Circles } from 'react-loader-spinner';
 import { Button } from 'components/Button/Button';
+import { MoviesPage } from 'components/MoviesPage/MoviesPage';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
@@ -12,7 +12,7 @@ const Movies = () => {
   const [loader, setLoader] = useState(false);
   const [page, setPage] = useState(1);
 
-  const query = searchParams.get('query');
+  const query = searchParams.get('query') ?? '';
 
   useEffect(() => {
     if (!query) return;
@@ -25,18 +25,18 @@ const Movies = () => {
     });
   }, [page, query]);
 
-  const ButtonClick = () => {
-    setPage(prevPage => prevPage + 1);
+  const visibleMovies = movies.filter(movie =>
+    movie.title.toLowerCase().includes(query.toLowerCase())
+  );
+
+  const onChange = query => {
+    setSearchParams(query !== '' ? { query } : {});
   };
 
   return (
     <>
-      <SearchMovie
-        setPage={setPage}
-        setSearchParams={setSearchParams}
-        setMovies={setMovies}
-      />
-      <HomePage movies={movies} />
+      <SearchMovie query={query} onChange={onChange} />
+      <MoviesPage visibleMovies={visibleMovies} />
 
       {loader ? (
         <Circles
@@ -49,7 +49,11 @@ const Movies = () => {
           visible={true}
         />
       ) : (
-        <>{movies.length && <Button buttonClick={ButtonClick} />}</>
+        <>
+          {movies.length > 0 && (
+            <Button buttonClick={() => setPage(prev => prev + 1)} />
+          )}
+        </>
       )}
     </>
   );

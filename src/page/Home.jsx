@@ -13,14 +13,12 @@ const Home = () => {
     });
   }, [page]);
 
-  const ButtonClick = () => {
-    setPage(prevPage => prevPage + 1);
-  };
-
   return (
     <>
       <HomePage movies={movies} />
-      {movies.length && <Button buttonClick={ButtonClick} />}
+      {movies.length > 0 && (
+        <Button buttonClick={() => setPage(prev => prev + 1)} />
+      )}
     </>
   );
 };

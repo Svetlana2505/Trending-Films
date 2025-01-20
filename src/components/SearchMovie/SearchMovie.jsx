@@ -1,32 +1,17 @@
-import { Form, Input, Button } from './SearchMovie.styled';
-import { useState } from 'react';
+import { Form, Input } from './SearchMovie.styled';
 
-export const SearchMovie = ({ setSearchParams, setMovies, setPage }) => {
-  const [valueName, setValueName] = useState('');
-
-  const handleChange = e => {
-    setValueName(e.target.value);
-  };
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    setSearchParams({ query: valueName });
-    setValueName('');
-    setMovies([]);
-    setPage(1);
-  };
-
+export const SearchMovie = ({ query, onChange }) => {
   return (
     <>
-      <Form onSubmit={handleSubmit}>
+      <Form>
         <Input
           type="text"
           name="query"
-          value={valueName}
-          onChange={handleChange}
+          value={query}
+          onChange={e => onChange(e.target.value)}
           autoComplete="off"
+          placeholder="Search"
         />
-        <Button>Search</Button>
       </Form>
     </>
   );
